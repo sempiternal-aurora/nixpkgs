@@ -32,7 +32,14 @@ stdenv.mkDerivation (finalAttrs: {
     z3'
   ];
 
-  cmakeFlags = [ (lib.cmakeFeature "Z3_DIR" "${z3'.dev}/lib/cmake") ];
+  cmakeFlags = [
+    (
+      if z3' != null then
+        lib.cmakeFeature "Z3_DIR" "${z3'.dev}/lib/cmake"
+      else
+        lib.cmakeFeature "CMAKE_DISABLE_FIND_PACKAGE_Z3" "On"
+    )
+  ];
 
   enableParallelBuilding = true;
 
