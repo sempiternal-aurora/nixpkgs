@@ -20,6 +20,7 @@
   ez_file,
   ez_api,
   ez_cmdliner,
+  ez_toml,
   zarith,
   zarith_stubs_js,
   iso8601,
@@ -82,6 +83,7 @@ buildDunePackage (finalAttrs: {
     ez_file
     ez_api
     ez_cmdliner
+    ez_toml
     zarith
     zarith_stubs_js
     iso8601
@@ -110,7 +112,6 @@ buildDunePackage (finalAttrs: {
     "sql_preproc"
     "sql_ast"
     "sql_parser"
-    "ez_toml"
     "ezr_toml"
     "cobol_typeck"
     "cobol_parser"

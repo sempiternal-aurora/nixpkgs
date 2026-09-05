@@ -627,6 +627,7 @@ let
         ez_file = callPackage ../development/ocaml-modules/ez_file { };
         ez_opam_file = callPackage ../development/ocaml-modules/ez_opam_file { };
         ez_subst = callPackage ../development/ocaml-modules/ez_subst { };
+        ez_toml = callPackage ../development/ocaml-modules/ez_toml { };
 
         ezgzip = callPackage ../development/ocaml-modules/ezgzip { };
 
