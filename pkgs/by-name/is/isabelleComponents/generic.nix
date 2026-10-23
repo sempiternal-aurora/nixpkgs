@@ -1,6 +1,7 @@
 {
   lib,
   stdenvNoCC,
+  callPackage,
   fetchurl,
   coreutils,
   net-tools,
@@ -177,6 +178,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
   passthru = {
     inherit componentsFn platform;
 
+    tests.linter = callPackage ./tests/linter.nix { isabelle = finalAttrs.finalPackage; };
     withComponents = f: buildIsabelle args (cp: componentsFn cp ++ f cp);
   };
 
