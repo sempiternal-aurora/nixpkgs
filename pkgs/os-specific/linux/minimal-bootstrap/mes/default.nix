@@ -19,11 +19,11 @@ in
 
 let
   pname = "mes";
-  version = "0.27.1";
+  version = "0.27.2";
 
   src = fetchurl {
     url = "mirror://gnu/mes/mes-${version}.tar.gz";
-    hash = "sha256-GDpA6kfqSfih470bnRLmdjdNZNY7x557wa59Zz398l0=";
+    hash = "sha256-93oAN6gtXRdWuZFUxf7+fB/ovrrg4uTDfy9FXidQ7rA=";
   };
 
   nyacc = callPackage ./nyacc.nix { inherit nyacc; };

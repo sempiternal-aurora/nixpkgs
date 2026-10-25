@@ -14,11 +14,11 @@ let
   # parse block comments outside top level. This seems to be fixed in development
   # versions of mes.
   # https://gitlab.com/janneke/commencement.scm/-/blob/fdc718f050171f12da58524f60c4d52c03e83df3/gcc-bootstrap.scm#L621
-  version = "1.09.1";
+  version = "3.00.0";
 
   src = fetchurl {
     url = "mirror://savannah/nyacc/nyacc-${version}.tar.gz";
-    hash = "sha256-DsmuU34NlReBpQ3jx5KayXqFwdS16F5dUVQuN1ECJxc=";
+    hash = "sha256-Aja1IHsSBKnj0ogt4R9VKmUoXviHEt3fRdDJAaM9ZoU=";
   };
 in
 kaem.runCommand "${pname}-${version}"
