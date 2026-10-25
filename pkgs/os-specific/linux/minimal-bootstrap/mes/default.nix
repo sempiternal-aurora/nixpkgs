@@ -30,6 +30,7 @@ let
 
   intptr =
     {
+      armv7l-linux = "int";
       i686-linux = "int";
       x86_64-linux = "long";
     }
@@ -57,6 +58,7 @@ let
 
   arch =
     {
+      armv7l-linux = "arm";
       i686-linux = "x86";
       x86_64-linux = "x86_64";
     }
@@ -81,6 +83,7 @@ let
     license = lib.licenses.gpl3Plus;
     teams = [ lib.teams.minimal-bootstrap ];
     platforms = [
+      "armv7l-linux"
       "i686-linux"
       "x86_64-linux"
     ];
